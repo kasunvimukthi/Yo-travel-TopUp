@@ -1,0 +1,1243 @@
+.container1{
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 150px 150px ;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-areas: 
+    "slidebar1 slidebar2 slidebar  content1 content1"
+    "slidebar1 slidebar2 slidebar content2 content2"
+    "slidebar1 slidebar2 slidebar content3 content3"
+    ;
+    grid-gap: 2mm;
+
+    /* display: grid;
+    background-color: cornsilk;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px  ;
+    justify-content: center;
+    grid-template-areas: 
+    "slidebar1 slidebar2 slidebar2 slidebar"
+    "slidebar1 content1 content2 content3"
+    ;
+    grid-gap: 2mm; */
+}
+
+.container2 {
+  position: relative;
+}
+
+/* .container3{
+    display: table-cell;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 400px;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    table-layout: ;
+
+} */
+.container3{
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgb(253, 253, 253);
+    overflow: auto;
+}
+
+/* .gallery{
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+}
+
+.gallery img{
+    width: 100%;
+    height: auto;
+} */
+
+.desc{
+    padding: 15px;
+    text-align: center;
+}
+
+#slidebar1{
+    background-color: aqua;
+    grid-area: slidebar1;
+}
+
+#slidebar2{
+    background-color: blueviolet;
+    grid-area: slidebar2;
+}
+
+#slidebar{
+    background-color: brown;
+    grid-area: slidebar;
+}
+
+#content1{
+    background-color: chartreuse;
+    grid-area: content1;
+}
+
+#content2{
+    background-color: darkcyan;
+    grid-area: content2;
+}
+
+#content3{
+    background-color: deeppink;
+    grid-area: content3;
+}
+
+/* Bottom right text */
+.text-block {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+}
+
+@media only screen and (max-width:992px){
+    .container1{
+    grid-template-columns: 500px;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+    grid-template-areas: 
+    "slidebar1"
+    "slidebar2"
+    "slidebar"
+    "content1"
+    "content2"
+    "content3";
+    }
+
+      
+}
+
+/* =====================================================================================================
+                                        SELECT CATEGORY / package.php
+======================================================================================================*/
+.text-end{
+    text-align: right;
+}
+.sticky_body{
+    min-height: 500px;
+}
+.sticky_img{
+    height: 225px;
+}
+.packages{
+    
+    display:block;
+    background-color: rgb(255, 255, 255);
+}
+
+.details_flex{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+   margin-left: -15px;
+   margin-right: -15px;
+    
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+}
+
+.imgbox{
+    
+    overflow: hidden;
+    
+    height: 40vh;
+    /* float: left; */
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    
+}
+.image{
+    background-color: rgba(255, 255, 255, 0);
+    width: 30%;
+    height: 91%;
+    margin-top: 2%;
+}
+
+.box_details{
+    height: 90%;
+}
+.details{
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    height: 75%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.more{
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    text-align: right;
+}
+
+/* ============================================= WIDTH < 691px ================================================*/
+@media screen and (max-width:691px){
+    .imgbox{
+        height: 450px;
+        display: flex;
+        font-size: 75%;
+        background-color: rgb(255, 255, 255);
+    }
+    .image{
+        height: 30vh;
+        width: 100%;
+        margin-top: 0%;
+        
+        background-color: rgb(255, 255, 255);
+    }
+    .box_details{
+        height: 70%;
+        background-color: rgb(255, 255, 255);
+    }
+    .details{
+        width: 95%;
+        height: 60%;
+        margin-left: 5%;
+        margin-top: 1%;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .more{
+        margin-left: 5%;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        margin-top: -50px;
+
+    }
+
+  }
+
+/* =============================================================================================================
+                                                    SELECT PACKAGE
+============================================================================================================= */
+#v_package{
+    display: contents;
+}
+#v_package .border{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+}
+#v_package .imgbox{
+    position: relative;
+    overflow: hidden;
+    width: 15%;
+    float: left;
+    margin: 1%;
+    background: rgb(255, 255, 255);    
+}
+
+#v_package .border .imgbox h2{
+    text-align: left;
+    font-size: 140%;
+    color: black;
+    padding-top: 3mm;
+}
+
+#v_package .border .imgbox h3{
+    text-align: left;
+    font-size: 120%;
+    color: black;
+}
+
+#v_package .border .imgbox h4{
+  text-align: center;
+  font-size: 120%;
+  color: black;
+  background-color: rgb(1, 151, 34);
+  margin: 3mm;
+}
+
+#v_package .border .imgbox h4:hover{
+  
+  color: rgb(226, 215, 215);
+  background-color: rgb(0, 66, 15);
+  cursor: pointer;
+}
+#v_package .border .imgbox:hover a{
+  
+  color: rgb(39, 204, 47);
+}
+
+#v_package .imgbox img{
+    width: 100%;
+    transition: all ease-in-out 0.4s;
+    height: 30vh;
+}
+#v_package .imgbox:hover img{
+    transform: scale(1.1);
+}
+#v_package .border .v_image{
+    background-color: rgba(255, 255, 255, 0);
+    
+}
+
+#v_package .border .v_image img{
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#v_package .border .v_image .head1{
+    width: 40vw;
+    height: 300px;
+    background-color: rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin-left: 5%;
+    position: absolute;
+    top: 35vh;
+    border-radius: 10px;
+    align-items: center;
+    
+}
+
+#v_package .border .v_image .head1 h1, h2, h3{
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-variant-caps: all-petite-caps;
+  
+  }
+
+  #v_package .border .v_image .head1 h2{
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-left: 9%;
+    width: 60%;
+    display: inline-flex;
+    float: left;
+}
+
+#v_package .border .v_image .head1 span{
+    margin-left: 30%;
+    text-align: right;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+
+}
+
+
+#v_package .border .v_image .head1 button{
+
+    margin-left: 40%;
+}
+
+
+#v_package .v_imgbox img{
+    width: 30%;
+    transition: all ease-in-out 0.4s;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 100px;
+}
+#v_package .v_form{
+    background-color: rgba(0, 0, 0, 0.034);
+    padding-top: 1cm;
+    border-style: groove;
+    margin-top: 0mm;
+    display: none;
+    
+}
+
+#v_package .v_form h2{
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 1cm;
+}
+
+#v_package .v_form h3{
+    padding-left: 2em;
+    font-size: 1em;
+    text-align: left;
+    display: inline-block;
+    padding-top: 2em;
+}
+
+#v_package .v_form .textbox{
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    margin-left: 15px;
+    margin-top: -30px; 
+    display: inline-block;
+}
+
+#v_package .v_form .textbox input{
+    border: none;
+    outline: none;
+    background: white;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    width: 100%; 
+    margin-right: 1em;   
+}
+
+#v_package .v_form .textbox1{
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    margin-left: 700px;
+    margin-top: -30px; 
+    display: block;
+}
+
+#v_package .v_form .textbox1 input{
+    border: none;
+    outline: none;
+    background: white;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    width: 100%;
+    margin-right: 1em;   
+}
+
+#v_package .v_form .textbox2{
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    margin-left: 27px;
+    margin-top: -30px; 
+    display: inline-block;
+}
+
+#v_package .v_form .textbox2 input{
+    border: none;
+    outline: none;
+    background: white;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    width: 100%;
+    margin-right: 1em;   
+}
+
+#v_package .v_form .textbox3{
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    margin-left: 27px;
+    margin-top: -30px; 
+    display: inline-block;
+}
+
+#v_package .v_form .textbox3 input{
+    border: none;
+    outline: none;
+    background: white;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    width: 120%;
+    margin-right: 1em;   
+}
+
+#v_package .v_form .textbox4{
+    background-color: rgb(255, 255, 255);
+    width: 212px;
+    margin-left: 27px;
+    margin-top: -30px; 
+    display: inline-block;
+}
+
+#v_package .v_form .textbox4 input{
+    border: none;
+    outline: none;
+    background: white;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    width: 100%;
+    margin-right: 1em;   
+}
+
+#v_package .v_form .textbox5{
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    margin-left: 27px;
+    margin-top: -30px; 
+    display: inline-block;
+}
+
+#v_package .v_form .textbox5 input{
+    border: none;
+    outline: none;
+    background: white;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    width: 100%;
+    margin-right: 1em;   
+}
+@media screen and (max-width:691px){
+    #v_package .border .v_image .head1{
+        width: 90%;
+    }
+    
+}
+/* =============================================================================================================
+                                                SELECT PACKAGE TAB 1
+============================================================================================================= */
+#v_package .border .vpackagetab{
+    margin-left: 7%;
+    margin-right: 7%;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    margin-top: 5%;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#v_package .border .vpackagetab .top{
+    text-align: center;
+}
+
+#v_package .border .vpackagetab .top h1{
+    text-align: center;
+    font-size: 1.2rem;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: black;
+    display: inline-block;
+    background-color: white;
+    font-weight: bold;
+}
+
+#v_package .border .vpackagetab .top h1:hover{
+    color: green;
+    border-bottom: solid green;
+    text-align: center;
+}
+
+#v_package .border .vpackagetab .top h1:active{
+    color: green;
+    border-bottom: solid green;
+    text-align: center;
+}
+/* ============================================ TAB 1 ==================================== */
+#v_package .border .vpackagetab .tab2,.tab3,.tab4,.tab5{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    /* display: inline-block; */
+    display: none;
+    margin-top: 5%;
+    
+}
+
+#v_package .border .vpackagetab .tab1{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    /* display: none; */
+    margin-top: 5%;
+    height: auto;
+}
+
+#v_package .border .vpackagetab .tab1 .col,.col1,.col2{
+    
+    margin-left: 3%;
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+
+#v_package .border .vpackagetab .tab1 .col h1,.col1 h1, 
+#v_package .border .vpackagetab .tab1 .col2 h1{
+    color: rgb(6, 116, 21);
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: white;
+    text-align: left;
+}
+
+#v_package .border .vpackagetab .tab1 .col .row,.row1,.row3{
+    display: block;
+    background-color: rgb(255, 255, 255);
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 5%;
+}
+
+#v_package .border .vpackagetab .tab1 .col .row p,.row1 p{
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+}
+
+#v_package .border .vpackagetab .tab1 .col1 .row1{
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+#v_package .border .vpackagetab .tab1 .col1 .row1 li{
+    width: 11vw;
+    height: 11vw;
+    float: left;
+    margin-left: 5px;
+    margin-top: 7px;
+    list-style: none;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    z-index: 5;
+}
+
+#v_package .border .vpackagetab .tab1 .col1 .row1 .li img{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    
+    
+}
+
+#v_package .border .vpackagetab .tab1 .col1 .row1 .a{
+    display: contents;
+    position: relative;
+}
+
+#v_package .border .vpackagetab .tab1 .col1 .row1 .more{
+    text-align: center;
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 0.2vw;
+    background-color: rgb(0, 0, 0);
+    width: 11vw;
+    height: 11vw;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 5px;
+    margin-top: 7px;
+    border-radius: 10px;
+    display: none;
+}
+
+#v_package .border .vpackagetab .tab1 .col1 .row1 .more:hover,.row1 li:hover{
+    transition: ease-in 0.2s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#v_package .border .vpackagetab .tab1 .col1 .row1 .more li{
+    width: 11vw;
+    height: 11vw;
+    float: left;
+    margin-left: -1px;
+    margin-top: -1px;
+    list-style: none;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    z-index: 5;
+}
+
+#v_package .border .vpackagetab .tab1 .row2 .map{
+    width: 100%;
+    height: 65vh;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+}
+
+#v_package .border .vpackagetab .tab1 .col1 .row1 .more .centered{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.685);
+    overflow: hidden;
+    display: none;
+}
+
+#v_package .border .vpackagetab .tab1 .col1 .row1 .more .centered h2{
+    color: white;
+    width: 11vw;
+    height: 11vw;
+    padding-top: 30%;
+    overflow: hidden;
+    display: none;
+    font-weight: bolder;
+    font-size: 1.9vw;
+}
+
+#v_package .border .vpackagetab .tab1 .row2{
+    display: inline-table;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    margin-bottom: 5%;
+} 
+
+#v_package .border .vpackagetab .tab1 .row2 h1{
+    color: rgb(6, 116, 21);
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: white;
+    text-align: left;
+    
+}
+
+#v_package .border .vpackagetab .tab1 .row2 img{
+    width: 100%;
+    height: 80vh;
+}
+
+#v_package .border .vpackagetab .tab1 .col2 .row3 li,.col .row li{
+    list-style: none;
+    font-size: 0.9rem;
+}
+#v_package .border .vpackagetab .tab1 .col2 .row3 li p,.col .row li p{
+    display: inline;
+}
+
+#v_package .border .vpackagetab .tab1 .col2 .row3 li::before,.col .row li::before{
+    content: "\27A4";
+    font-size: 1rem;
+    margin-right: 2%;
+    color: green;
+}
+@media screen and (min-width:691px){
+    #v_package .border .vpackagetab .tab1 .col,.col1,.col2{
+        width: 38vw;
+    }
+}
+/* ============================================ TAB 2 ==================================== */
+
+
+#v_package .vpackagetab .tab2 .row4,.tab3 .row5,.tab4 .row6{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 3%;
+    border-radius: 15px;
+    /* border-color: black; */
+    float: left;
+    overflow: hidden;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.171);
+    
+}
+
+#v_package .vpackagetab .tab2 .row4 .col4,.tab3 .row5 .col6,.tab4 .row6 .col9{
+
+
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+
+#v_package .vpackagetab .tab2 .row4 .col4 img,.tab3 .row5 .col6 img,.tab4 .row6 .col9 img{
+    width: 100%;
+    height: 100%;
+}
+
+#v_package .vpackagetab .tab2 .row4 .col5,.tab3 .row5 .col7,.tab4 .row6 .col10{
+    background-color: rgb(255, 255, 255);
+    float: left;
+    padding: 1%;
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#v_package .vpackagetab .tab2 .row4 .col5 h1,.tab3 .row5 .col7 h1,.tab4 .row6 .col10 h1{
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    float: left;
+    padding-right: 2%;
+}
+
+#v_package .vpackagetab .tab2 .row4 .col5 h2,.tab3 .row5 .col7 h2,.tab4 .row6 .col10 h2{
+    font-weight: lighter;
+    font-size: 0.8rem;
+    color: black;
+    font-style: italic;
+    float: left;
+}
+
+#v_package .vpackagetab .tab2 .row4 .col5 p,.tab3 .row5 .col7 p,.tab4 .row6 .col10 p{
+    font-size: 0.9rem;
+    color: black;
+    display: inline-table;
+    margin-top: 2%;
+    padding-bottom: 2%;
+}
+
+#v_package .vpackagetab .tab2 .row4 .col5 h3,h4{
+    font-size: 1rem;
+    float: left;
+    color: black;
+    font-weight: bold;
+}
+
+#v_package .vpackagetab .tab2 .row4 .col5 h3 span, h4 span{
+    font-size: 1rem;
+    font-weight: lighter;
+}
+@media screen and (max-width:691px){
+    #v_package .vpackagetab .tab2 .row4,.tab3 .row5,.tab4 .row6{
+        width: 100%;
+        height: 500px;
+    }
+    #v_package .vpackagetab .tab2 .row4 .col4,.tab3 .row5 .col6,.tab4 .row6 .col9{
+        height: 40%;
+    }
+}
+
+@media screen and (min-width:691px){
+    #v_package .vpackagetab .tab2 .row4 .col4,.tab3 .row5 .col6,.tab4 .row6 .col9{
+        width: 30%;
+    }
+    #v_package .vpackagetab .tab2 .row4 .col5,.tab3 .row5 .col7,.tab4 .row6 .col10{
+        width: 70%;
+    }
+}
+/* ============================================ TAB 3 ==================================== */
+
+
+#v_package .vpackagetab .tab3 .row5 .col7 .col8,.tab4 .row6 .col10 .col11{
+    background-color: rgb(253, 253, 253);
+    float: left;
+}
+
+
+#v_package .vpackagetab .tab3 .row5 .col7 .col8 img,.tab4 .row6 .col10 .col11 img{
+    width: 40px;
+    height: 40px;
+    
+    margin: 5px;
+}
+
+#v_package .vpackagetab .tab3 .row5 .col7 h3,.tab4 .row6 .col10 h3{
+    float: right;
+    font-size: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: orange;
+
+}
+
+#v_package .vpackagetab .tab3 .row5 .col7 h3:hover,.tab4 .row6 .col10 h3:hover{
+    background-color: green;
+    color: white;
+}
+
+/* ============================================ TAB 4 ==================================== */
+
+
+/* ============================================ TAB 5 ==================================== */
+
+
+#v_package .vpackagetab .tab5 .row7{
+    float: left;
+}
+@media screen and (max-width:691px){
+    #v_package .vpackagetab .tab5 .row7{
+    width: 90%;
+    margin-left: 5%;
+    }
+    #v_package .vpackagetab .tab5 .row7 img{
+        width: 100px;
+        height: 100px;
+        margin: 3px;
+    }
+}
+
+@media screen and (min-width:691px){
+    #v_package .vpackagetab .tab5 .row7{
+        width: 80%;
+        margin-left: 10%;
+        }
+    #v_package .vpackagetab .tab5 .row7 img{
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+    }
+}
+#v_package .vpackagetab .tab5 .row7 img{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+#v_package .vpackagetab .tab5 .row7 img:hover{
+    transition: ease-in 1s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.admin {
+    background: rgba(102, 82, 82, 0.096);
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    
+}
+
+#admin_popup {
+    margin-left: 35%;
+    margin-top: 10%;
+    border-style: double;
+    width: 30%;
+    height: 60%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#admin_popup .login-box h1 {
+    text-align: center;
+    border-bottom: 5px solid springgreen;
+}
+
+#admin_popup .textbox{
+    width: 70%;
+    color: white;
+    overflow: hidden;
+    font-size: 150%;
+    padding: 4% 0;
+    margin: 4% 0;
+    border-bottom: 1px solid springgreen;
+    margin-left: 15%;
+  }
+
+#admin_popup .textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 80%;
+    width: 80%;
+    float: right;
+    margin: 0 10px;
+  }
+
+#admin_popup  .btn{
+    background: none;
+    padding: 3%;
+    margin: 2% 0;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 25%;
+    width: 50%;
+    text-align: center;
+    
+  }
+
+  #admin_popup  .btn:hover{
+      border-radius: 35%;
+      border-color: darkblue;
+      border-style: solid;
+    }
+/* ===================================================================================
+                                     TAB 1 
+======================================================================================= */
+#tab1 .tab1{
+    
+    /* display:block; */
+    
+    background-color: rgba(255, 255, 255, 0);
+    height: 70%;
+    padding-bottom: 2%;
+}
+.col-12{
+    background-color: rgba(255, 255, 255, 0);
+    
+    
+    margin-top: 1%;
+    
+}
+.pi-top{
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 1%;
+    height: 10%;
+    /* display: grid; */
+    text-align: center;
+}
+.slider-in{
+    width: 350px;
+    
+    border-radius: 1px;
+    border-color: rgba(255, 255, 255, 0);
+    border-style: dotted;
+    /* float: left; */
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+    height: 90vh;
+}
+.myslide{
+    display: block;
+ 
+    
+}
+.popular-itineraries{
+    
+    
+    width: 90%;
+    
+    margin-left: 5%;
+    
+    /* display: flexbox; */
+
+    background-color:#f3c6cd;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+    height: 90vh;
+    overflow: hidden;
+    
+}
+
+.slider-in img{
+    height: 200px;
+    
+}
+
+/* ============================================================================
+                                    SLIDER
+===============================================================================*/
+#sliderr{
+    background-color: rgba(130, 184, 24, 0);
+    height: auto;
+    
+    margin-top: 2%;
+}
+#sliderr .slider{
+    width: 90%;
+    background-color: hsla(0, 0%, 100%, 0.431);
+    margin-left: 5%;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.171);
+}
+
+
+#sliderr .thumbnail img {
+    width: 400px;
+    height: 200px;
+    background-color: rgba(199, 61, 36, 0);
+}
+
+#sliderr .container {
+    max-width: 90%;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+    
+}
+
+#sliderr .slider h1 {
+    font-size: 2rem;
+    
+    text-align: center;
+    color:black;
+}
+
+
+#sliderr .slide-container {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color:rgba(155, 20, 20, 0);
+    height: auto;
+}
+
+#sliderr .slider .arrow {
+    width: 2rem;
+    margin: 0 1rem;
+    height: 2rem;
+}
+
+#sliderr .slider section {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* border: 1px solid black; */
+}
+
+#sliderr .slider section::-webkit-scrollbar {
+    height: 5px;
+    width: 2px;
+    border: 1px solid #d5d5d5;
+    background: #ffffff;
+    display: none;
+}
+
+#sliderr .slider section::-webkit-scrollbar-track {
+    --webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+#sliderr .slider section::-webkit-scrollbar-thumb {
+    background-color: rgb(23, 189, 59);
+    outline: 1px solid #eee;
+     /* border-radius: 100px; */
+  }
+
+  #sliderr .slider section .thumbnail {
+    flex: 0 0 auto;
+	object-fit: cover;
+	
+	margin: 0px;
+    box-shadow: 0px 2px 15px rgba(29, 184, 29, 0.664);
+    overflow: hidden;
+    transform: scale(.95);
+    transition: all .3s;
+    border-radius: 5px;
+
+}
+@media screen and (max-width:691px){
+    #sliderr .slider section .thumbnail {
+        width: 300px;
+        height: 700px;
+    }
+}
+@media screen and (min-width:691px){
+    #sliderr .slider section .thumbnail {
+        width: 400px;
+        height: 700px;
+    }
+}
+
+#sliderr .slider section .thumbnail:hover {
+    transform: scale(1);
+  
+}
+
+#sliderr .slider .product-details {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: #fff;
+    height: 500px;
+    text-align: left;
+}
+
+#sliderr .slider .thumbnail h1{
+    font-size: 1rem;
+    padding-left: 2%;
+    padding-right: 2%;
+    float: right;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    
+    
+}
+
+#sliderr .slider .product-details h2 {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    height: 5%;
+    padding-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    overflow: hidden;
+}
+
+#sliderr .slider .product-details h3 {
+    font-size: 1rem;
+    color: black;
+    font-weight: lighter;
+    font-style: italic;
+    padding-bottom: 1%;
+    height: 20%;
+    padding-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    overflow: hidden;
+}
+
+#sliderr .slider .product-details h4 {
+    font-size: 2rem;
+    color: rgb(12, 189, 21);
+    font-weight: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 1%;
+    text-align: left;
+    overflow: hidden;
+}
+
+#sliderr .slider .product-details h5 {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 1%;
+    text-align: left;
+    overflow: hidden;
+}
+
+#sliderr .slider .product-details h6 {
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: yellowgreen;
+    color: rgb(0, 0, 0);
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#sliderr .slider .product-details h6:hover {
+    background-color: rgb(16, 184, 30);
+}
+
+#sliderr .slider .product-details p {
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+    color: rgb(0, 0, 0);
+    height: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    display: inline-table;
+    overflow: hidden;
+}
+
+#book-now .book-pop{
+    width: 100%;
+    height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 1000000;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  display: none;
+}
+
+
+/* ======================================================================================
+                                ACCOMMODATION CSS
+=======================================================================================*/
