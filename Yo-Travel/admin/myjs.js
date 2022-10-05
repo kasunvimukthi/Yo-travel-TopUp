@@ -4412,17 +4412,17 @@ $('#edit_tc').submit(function(event){
         var IID = $('#IID').val();
         var ID = $('#payment_status').val();
         var txt = $('#paymentSlipTxt').val();
-
+        // console.log(IID);
         $.ajax(
             {
                 url:"action.php",
                 method:"POST",
                 data:{action:action,ID:ID, txt:txt, IID:IID},
-                success:function(data)
+                success:function(data) 
                 {   
                     if(data == 'done'){
-                        swal('Success','Payement Status Change','success');
-                        all();
+                        swal('Please wait','Please wait for send email','info');
+                        invoice_send();
                     }else{
                         swal('Error','Somthing Went Wrong','error');
                     }
@@ -4431,6 +4431,29 @@ $('#edit_tc').submit(function(event){
             })
         
     });
+
+    function invoice_send()
+    {
+        var action = "invoice_send";
+        var IID = $('#IID').val();
+        var ID = $('#payment_status').val();
+        var txt = $('#paymentSlipTxt').val();
+        var start = $('#T_start_date5').val();
+        var name = $('#User_Name').val();
+        var email = $('#User_Email_Address').val();
+        
+        $.ajax({
+            url:"invoice_send.php",
+            method:"POST",
+            data:{action:action,IID:IID,ID:ID,txt:txt,start:start,name:name,email:email},
+            success:function(data)
+            {
+                swal('Success','Email sent now','success');
+                $('#user_invoice_view').modal("hide");
+                all();
+            }
+        })
+    }
 // ============================================== USER JORNEY VIEW =============================================================
     $(document).on('click', '.pacenger_list_by_joutney', function(){
 

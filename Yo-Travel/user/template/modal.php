@@ -15,15 +15,17 @@
 
             $sql = "SELECT * FROM `package` WHERE `Travel_ID` = {$post_id}"; 
             $result = mysqli_query($conn, $sql);
-            ?>
+            
 
-            <?php
-            $result = mysqli_query($conn, $sql) or die("Query Failed.");
+            // $result = mysqli_query($conn, $sql) or die("Query Failed.");
             if(mysqli_num_rows($result) > 0){
             while($row = mysqli_fetch_assoc($result))
 {
+            $T_ID = $row['Travel_ID'];
+            $T_Start = $row['T_Start_Date'];
+            $T_End = $row['T_End_Date'];
 
-            $query1 = "SELECT SUM(`U_adults`) AS `U_adults` FROM `invoice` WHERE `T_ID` = {$row['Travel_ID']}";
+            $query1 = "SELECT SUM(`U_adults`) AS `U_adults` FROM `invoice` WHERE `T_ID` = $T_ID && Status = 'Full Paid' && T_start_date = '$T_Start' && T_end_date = '$T_End'";
                 $query_run1 = mysqli_query($conn ,$query1);
 
                 if(mysqli_num_rows($query_run1) > 0)
@@ -39,7 +41,7 @@
                         $book1 = 0;
                     }
             
-                    $query2 = "SELECT SUM(`U_children`) AS `U_children` FROM `invoice` WHERE `T_ID` = {$row['Travel_ID']}";
+                    $query2 = "SELECT SUM(`U_children`) AS `U_children` FROM `invoice` WHERE `T_ID` = $T_ID && Status = 'Full Paid' && T_start_date = '$T_Start' && T_end_date = '$T_End'";
                     $query_run2 = mysqli_query($conn ,$query2);
 
                     if(mysqli_num_rows($query_run2) > 0)

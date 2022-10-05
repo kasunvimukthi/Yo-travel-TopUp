@@ -7,7 +7,8 @@
           <h2 class="fadein">Some photos from <span>Our Photo Gallery</span></h2>
           <p></p>
         </div>
-
+        <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <?php
 						$conn1=mysqli_connect("localhost","root","","traveldb");
 								$sql = "SELECT * FROM `package` WHERE Status=1 ORDER BY RAND () LIMIT 8";
@@ -15,10 +16,12 @@
 								if(mysqli_num_rows($result1) > 0){
 								while($row1 = mysqli_fetch_assoc($result1)) {?>
 
-        <div class="gallery-row ">
+
+    
+        <div class="gallery-row col-md-3" style="margin: 0%; padding-bottom: 15px; padding-top: 15px;">
 
               <a href="imageView1.php?image_id=<?php echo $row1["Travel_ID"]; ?>" class="venobox" data-gall="gallery-item" width="100%" height="100%">
-                <img src="imageView1.php?image_id=<?php echo $row1["Travel_ID"]; ?>" width="100%" height="100%">
+                <img src="imageView1.php?image_id=<?php echo $row1["Travel_ID"]; ?>" width="100%" height="250vh">
                 <div class="layer">
                   <p><?php echo $row1["T_Name"]; ?></p>
                 </div>
@@ -26,8 +29,8 @@
         </div>
         <?php }
                 }?>
-        
-                
+        </div>
+      </div>
       </div>
       </div>
       

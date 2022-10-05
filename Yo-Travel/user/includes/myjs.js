@@ -149,7 +149,7 @@ $('#book_submit').submit(function(event){
     }else
     if(user_address == '')
     {
-    swal('Fill in the blank','Please Enter Your Address','info');
+    swal('Fill in the blank','Please Enter Your Addresssvdfhj','info');
     $('#book_now_modal').modal('hide');
     return false;
     }else
@@ -205,9 +205,9 @@ $('#book_submit').submit(function(event){
             success:function(data)
             {
                 // console.log(data);
-                if(data = 'change')
+                if(data == 'change')
                 {
-                    swal('Greate Job..','This Package You Booked Now','success');
+                    swal('Greate Job..','This Package Add Into Your Booking List','success');
                     $('#book_submit')[0].reset();
                     $('#book_now_modal').modal('hide');
                     invoice_send();
@@ -216,7 +216,7 @@ $('#book_submit').submit(function(event){
 
                 }
                 else
-                if(data = 'not_change')
+                if(data == 'not_change')
                 {
                     swal('System Error..','Please Contact Our Hot-line','error');
                 }

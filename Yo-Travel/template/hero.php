@@ -1,5 +1,5 @@
 <!-- ======= Hero Section ======= -->
-<section id="hero">
+<section id="hero" style="max-height: 100vh;">
     <div class="hero-container">
       <div id="heroCarousel" class="carousel slidfe carousel-fade" data-ride="carousel">
 

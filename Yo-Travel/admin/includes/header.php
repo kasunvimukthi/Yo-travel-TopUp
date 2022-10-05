@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>Yo-Travel - Dashboard</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
