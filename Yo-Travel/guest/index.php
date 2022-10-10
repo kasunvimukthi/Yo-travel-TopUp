@@ -1,4 +1,4 @@
-<body>
+<body class="bg-light">
     
 
 <?php

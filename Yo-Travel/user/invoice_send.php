@@ -136,7 +136,7 @@
 
     $mail->Host       = "smtp.gmail.com";                     //Set the SMTP server to send through
     $mail->Username   = "yotravelmail@gmail.com";                     //SMTP username
-    $mail->Password   = "mrdylmwjwqagvlra";                               //SMTP password
+    $mail->Password   = "yotravel@password#1234";                               //SMTP password
 
     $mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -151,21 +151,19 @@
     $mail->Subject = "Travel Booking Successful";
 
     $email_template = "
-    <h3>Dear $get_name ,</h3>
-    <p>Your invoice received us. Please deposite to invoice value to our bank Account.</p>
-    <p></p>
-    <p>Bank : xxxxxxxx</p>
-    <p>Account No :xxxx xxxx  xxxx</p>
-    <p>Account Name : xxxx xxxx</p>
-    <p></p>
-    <p>Your invoice & QR Code attached with this mail.</p>
-    <p></p>
-    <p></p>
+    <h2>Dear $get_name ,</h2>
+    <h3>Your invoice received us. Please deposite to invoice ammount to our bank Account.
+    
+    Bank : xxxxxxxx
+    Account No :xxxx xxxx  xxxx
+    Account Name : xxxx xxxx
+
+     Your invoice & QR Code attached with this mail.</h3>
     <p>Yo-travel(PVT)Ltd</p>
-    <p>Tel : 0123456789</p>
-    <p>Address : 123/03,</p>
-    <p>Colombo,</p>
-    <p>Sri Lanka</p>
+    <p>Tel : 076 575 6616</p>
+    <p>Address : 267/2,</p>
+    <p>Ihalabiyanwila,</p>
+    <p>Kadawatha</p>
     ";
 
     $mail->Body = $email_template;

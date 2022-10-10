@@ -10,7 +10,7 @@
 
 ?>
  <link href="style.css" rel='stylesheet' type='text/css' />
- <div class="packages bg-light">
+ <div class="ml-5 mt-5 mr-5 packages">
 
   <?php
 
@@ -23,13 +23,13 @@
   if(mysqli_num_rows($result1) > 0){
   while($row1 = mysqli_fetch_assoc($result1)) {?>
 
-   <h1 class="text-center pt-5"><?php echo $row1['C_Name']; ?></h1>
+   <h1 class="text-center"><?php echo $row1['C_Name']; ?></h1>
 
    <?php }
   }
   ?>
-  <div class="row col-md-12 mt-5" style="margin-left: 0px;">
-    <div class="col-md-4 bg-dark mt-2 pb-3">
+  <div class="row col-md-12 mt-5">
+    <div class="col-md-4 bg-dark mt-2 mb-3">
     <!-- ============================================================ STICKY SIDE BAR ============================================== -->
       <div class="position-sticky" style="top: 5rem;">
       <div class="hero-container sticky_body">
@@ -112,8 +112,8 @@
       </div>
     </div>
 <!-- ================================================================== PACKAGE BODY ============================================= -->
-    <div class="col-md-8 bg-light">
-    <div class="details_flex mt-2 bg-light">
+    <div class="col-md-8">
+    <div class="ml-1 details_flex mt-2">
         <div class="col-md-12">
 
       <?php
@@ -130,8 +130,8 @@
           <img src="imageView1.php?image_id=<?php echo $row["Travel_ID"]; ?>"width="100%" height="100%" />
 
             </div>
-          <div class="col mt-3 pb-2 position-static row box_details" style="margin-left: 0px; margin-right: 0px;">
-            <div class="details" style="margin: 0px; width: 100%;">
+          <div class="col mt-3  position-static row box_details">
+            <div class="details">
               <dt><?php echo $row['T_Name']; ?></dt>
               <p class="mb-0 card-text text-dark"><dt>Locations - </dt><p class="small"><?php echo $row['T_Locations']; ?></p></p>
               <div class="mb-1 text-muted"><?php echo $row['T_Details']; ?></div>
@@ -153,7 +153,7 @@
               <dt>Date <?php echo $row["T_Start_Date"]; ?></dt>
 
               </div>
-              <div class="more" style="margin-left: 0px;">
+              <div class="more">
               <a href="selectpackage.php?id=<?php echo $row['Travel_ID']; ?>">
               <button class="btn btn-success col-md-4">More Info</button></a>
               </div>

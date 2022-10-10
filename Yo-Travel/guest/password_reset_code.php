@@ -2,13 +2,15 @@
 session_start(); 
     include ('db_conn.php');
 
+    //Load Composer's autoloader
+    require '../vendor/autoload.php';
+  
+
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-    //Load Composer's autoloader
-    require '../vendor/autoload.php';
-  
+
 
     function send_password_reset($get_name,$get_email,$code)
     {
@@ -20,7 +22,7 @@ session_start();
 
     $mail->Host       = "smtp.gmail.com";                     //Set the SMTP server to send through
     $mail->Username   = "yotravelmail@gmail.com";                     //SMTP username
-    $mail->Password   = "mrdylmwjwqagvlra";                               //SMTP password
+    $mail->Password   = "yotravel@password#1234";                               //SMTP password
 
     $mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -37,18 +39,17 @@ session_start();
     <h3>You are reciving this mail because we received a password reset request for your account</h3>
     <p>Your Email - $get_email</p>
     <p>Your password reset code - $code</p>
-    <p></p>
-    <p></p>
-    <p>Yo-travel(PVT)Ltd</p>
-    <p>Tel : 0123456789</p>
-    <p>Address : 123/03,</p>
-    <p>Colombo,</p>
-    <p>Sri Lanka</p>
+    
     ";
 
     $mail->Body = $email_template;
     $mail->send();
 
+    // if (!$mail->send()){
+    //     echo 'mailer error';
+    // }else{
+    //     echo 'sent';
+    // }
 
     }
     if(isset($_POST['password_reset_code_button']))

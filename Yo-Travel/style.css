@@ -205,15 +205,15 @@
         background-color: rgb(255, 255, 255);
     }
     .details{
-        /* width: 95%; */
+        width: 95%;
         height: 60%;
-        /* margin-left: 5%;
-        margin-top: 1%; */
+        margin-left: 5%;
+        margin-top: 1%;
         background-color: rgb(255, 255, 255);
     }
     
     .more{
-        /* margin-left: 5%; */
+        margin-left: 5%;
         background-color: rgb(255, 255, 255);
         width: 100%;
         margin-top: -50px;
@@ -297,8 +297,7 @@
 
 #v_package .border .v_image .head1{
     width: 40vw;
-    /* height: 300px; */
-    padding-bottom: 2%;
+    height: 300px;
     background-color: rgb(0, 0, 0, 0.5);
     overflow: hidden;
     margin-left: 5%;

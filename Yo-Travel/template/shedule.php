@@ -4,7 +4,7 @@
             <h1 class="">Our Travel Shedule</h1>
             <p>This is our upcoming travel plans</p>
         </div>
-        <div class="shedule_container col-md-12">
+        <div class="shedule_container">
         <div class="table-responsive">  
         <?php 
  

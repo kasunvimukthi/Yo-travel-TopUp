@@ -11,7 +11,7 @@
         <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1911694.0001339049!2d79.73294064577175!3d7.487424225233496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f889b3269b19%3A0x99b8fe134072979b!2s267%2C%202%20Ihala%20Biyanwila%20Rd%2C%20Kadawatha!5e0!3m2!1sen!2slk!4v1632449717487!5m2!1sen!2slk" frameborder="0" allowfullscreen></iframe>
       </div> -->
 
-      <div class="container col-md-11">
+      <div class="container mt-5">
 
         <div class="info-wrap"><h4 class="col-md-12 pb-3 text-center" style="font-size: 19px;">Enquiry Now</h4>
           <div class="row">

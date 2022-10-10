@@ -539,8 +539,7 @@ if($_POST["action"] == "user_invoice_view_fetch")
 
                 <div class="col-md-12 row">
                 <div class="col-md-5 row">
-                <input type="hidden" class="form-control" id="T_start_date5" name=""  value="'.$T_start_date.'" readonly>
-                    <p class="font-weight-bold text-dark" id="">Start Date '.$T_start_date.'</p>
+                    <p class="font-weight-bold text-dark">Start Date '.$T_start_date.'</p>
                 </div>
                 <div class="col-md-5 row">
                     <p class="font-weight-bold text-dark">End Date '.$T_end_date.'</p>
@@ -561,14 +560,14 @@ if($_POST["action"] == "user_invoice_view_fetch")
             <label for="" class="form-label">Full Name</label>
           </div>
           <div class="col-sm-8 pt-1">
-            <input type="text" class="form-control" id="User_Name" name=""  value="'.$Name.'" readonly>
+            <input type="text" class="form-control" id="" name=""  value="'.$Name.'" readonly>
           </div>
 
           <div class="col-sm-4 pt-1">
             <label for="" class="form-label">Email Address</label>
           </div>
           <div class="col-sm-8 pt-1">
-            <input type="text" class="form-control" id="User_Email_Address" name=""  value="'.$Email_Address.'" readonly>
+            <input type="text" class="form-control" id="" name=""  value="'.$Email_Address.'" readonly>
           </div>
 
           <div class="col-sm-4 pt-1">
