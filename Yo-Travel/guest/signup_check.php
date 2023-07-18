@@ -55,16 +55,16 @@ session_start();
         
 		$mail = new PHPMailer(true);
          //Server settings
-		// $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+		$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
 		$mail->isSMTP();                                            //Send using SMTP
 		$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
 
 		$mail->Host       = "smtp.gmail.com";                     //Set the SMTP server to send through
 		$mail->Username   = "yotravelmail@gmail.com";                     //SMTP username
-		$mail->Password   = "yotravel@password#1234";                               //SMTP password
+		$mail->Password   = "iwsstymsrfxjocuq";                               //SMTP password
 
-		$mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
-		$mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+		$mail->SMTPSecure = "ssl";            //Enable implicit TLS encryption
+		$mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
 		//Recipients
 		$mail->setFrom("yotravelmail@gmail.com", "Yo-travel");
@@ -87,7 +87,7 @@ session_start();
 
 		$mail->Body = $email_template;
 		$mail->send();
-
+		
 		
 		}
 	if($_POST["action"] == "new_user_register")

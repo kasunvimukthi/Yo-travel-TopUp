@@ -222,9 +222,10 @@ $('#enquiry_form').submit(function(event){
           success:function(data)
           {
             
+            console.log(data);
               swal('Your Account Has Been Created Now','Check Your E-mail, We Sent Your QR Code','success');
               $('#register_now')[0].reset();
-
+            
             
           }
       })

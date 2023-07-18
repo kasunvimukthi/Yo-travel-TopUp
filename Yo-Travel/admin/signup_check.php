@@ -88,10 +88,10 @@ include "db_conn.php";
 
 		$mail->Host       = "smtp.gmail.com";                     //Set the SMTP server to send through
 		$mail->Username   = "yotravelmail@gmail.com";                     //SMTP username
-		$mail->Password   = "yotravel@password#1234";                               //SMTP password
+		$mail->Password   = "iwsstymsrfxjocuq";                               //SMTP password
 
-		$mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
-		$mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+		$mail->SMTPSecure = "ssl";            //Enable implicit TLS encryption
+		$mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
 		//Recipients
 		$mail->setFrom("yotravelmail@gmail.com", "Yo-travel");
@@ -161,10 +161,10 @@ include "db_conn.php";
 
 		$mail->Host       = "smtp.gmail.com";                     //Set the SMTP server to send through
 		$mail->Username   = "yotravelmail@gmail.com";                     //SMTP username
-		$mail->Password   = "yotravel@password#1234";                               //SMTP password
+		$mail->Password   = "iwsstymsrfxjocuq";                               //SMTP password
 
-		$mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
-		$mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+		$mail->SMTPSecure = "ssl";            //Enable implicit TLS encryption
+		$mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
 		//Recipients
 		$mail->setFrom("yotravelmail@gmail.com", "Yo-travel");
@@ -173,11 +173,11 @@ include "db_conn.php";
 		$mail->isHTML(true);
 		
 		$mail->addStringAttachment($file2, 'Yo-travel-login.png');
-		$mail->Subject = "Successfully Create Admin Account";
+		$mail->Subject = "Successfully Create Guider Account";
 
 		$email_template = "
 		<h2>Dear $name ,</h2>
-		<h3>New guider account successfully create on Yo-travel.com. You can access our system using your QR code. Your QR code is attached to this mail.</h3>
+		<h3>New guider account successfully create on Yo-travel.com. You can access our system using your QR code. Your QR code is attached with this mail.</h3>
 		<p>Yo-travel(PVT)Ltd</p>
 		<p>Tel : 076 575 6616</p>
 		<p>Address : 267/2,</p>
